@@ -9,7 +9,7 @@ export interface DOMRect {
   y: number;
 }
 
-export type modeType = "day" | "week" | "month" | "agenda";
+export type modeType = "day" | "week" | "month";
 
 export enum DRAG_N_RESIZE_DIRECTION {
   BACKWARDS = "backwards",
