@@ -1,7 +1,7 @@
 <template>
   <div
     :id="elementId"
-    class="agenda__event is-event"
+    class="custom_agenda__event is-event"
     @click.prevent="handleClickOnEvent"
     v-if="isCustomAgendaEvent"
   >
@@ -169,6 +169,17 @@ export default defineComponent({
 .agenda__event {
   background-color: v-bind(eventBackgroundColor);
   color: v-bind(eventColor);
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  border-radius: 4px;
+  font-size: var(--qalendar-font-2xs);
+  margin-bottom: 4px;
+  padding: var(--qalendar-spacing);
+  cursor: pointer;
+  user-select: none;
+}
+.custom-agenda__event {
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
