@@ -229,15 +229,11 @@ export default defineComponent({
     },
 
     handleClickOnEvent(event: {
-      eventElement: HTMLDivElement;
-      clickedEvent: eventInterface;
+    eventElement: HTMLDivElement;
+    clickedEvent: eventInterface;
     }) {
-      this.$emit('event-was-clicked', event);
-
-      this.selectedEventElement = event.eventElement;
-      this.selectedEvent = event.clickedEvent;
+        this.$emit('event-was-clicked', event);
     },
-
     handleEventWasDragged(calendarEvent: eventInterface) {
       this.$emit('event-was-dragged', calendarEvent);
       const newEvents = [...this.events, ...this.fullDayEvents].filter(
