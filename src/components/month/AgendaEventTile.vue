@@ -114,10 +114,6 @@ export default defineComponent({
     },
 
     isCustomAgendaEvent() {
-      // Logic to determine if this event should use a custom agenda event slot
-      if (Array.isArray(this.calendarEvent.isCustom)) {
-        return this.calendarEvent.isCustom.includes('agenda');
-      }
       return this.calendarEvent.isCustom || false;
     },
 
